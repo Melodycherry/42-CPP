@@ -1,7 +1,7 @@
 # ⚙️ Piscine CPP — Modules 00 à 09  
 
-Découverte progressive des concepts fondamentaux de la programmation orientée objet en C++.
-La Piscine CPP est composée de **10 modules**, chacun introduisant un nouveau concept essentiel : ... ( a completer )
+Découverte progressive des concepts fondamentaux de la programmation orientée objet en C++.  
+La Piscine CPP est composée de **10 modules**, chacun introduisant un nouveau concept essentiel : ... ( a completer )  
 Chaque module contient plusieurs exercices, à réaliser et valider indépendamment.
 
 ---
@@ -9,8 +9,11 @@ Chaque module contient plusieurs exercices, à réaliser et valider indépendamm
 ## 📦 Contenu des modules
 
 ### 🧩 Module 00 — Bases du C++  
-Introduction au langage C++ et premières manipulations :
-
+Introduction au langage C++ et premières manipulations :  
+*Namespace, classes, member functions, stdio streams, initialization lists, static, const, and some other basic stuff*  
+EX 00 : Megaphone  
+EX 01 : My Awesome Phonebook  
+EX 02 : The Job Of Your Dreams  
 
 ---
 
