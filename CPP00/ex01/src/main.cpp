@@ -24,13 +24,13 @@
 // -> fonction search contact
 
 // else if EXIT
-// -> exit(0);
+// -> exit(0); // ne pas utiliser exit en tant que tel car interdit en CPP
 // sujet dit : programme quit and contact lost forever 
 // check si on doit free des trucs avant de quitter ?? et ou ?? destructeur ? 
 
 // else
 // -> print message d'erreur ( a definir ? )
-// check si on doit free des trucs avant de quitter ?? again ?? 
+// check si on doit free des trucs avant de quitter ?? again ?? attention FREE non plus on peut pas utiliser
 
 int main ()
 {
