@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 18:40:05 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/11/29 17:13:29 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/11/30 11:31:43 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,22 @@
 // ici ou ds la cintact.hpp ??
 
 // creation de la classe phonebook
+
+class phonebook{
+
+	private:
+	// smth
+
+	public:
+	//smth 
+
+	// constructeur et destructeur again ?
+	phonebook(void);
+	~phonebook(void);
+
+	//TEST
+	void	test(void);
+};
 
 // dans les cahmps prives 
 // contact avec le define de max contact de 8 

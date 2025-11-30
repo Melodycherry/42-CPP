@@ -6,15 +6,27 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 16:48:05 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/11/29 17:11:02 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/11/30 11:40:59 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
-#include <string>
-#include <iostream>
+class contact {
+	private:
+	// element prives
+
+	public:
+	// trucs public 
+	
+	// truc de constructeur / destructeur que je sais pas ou mettre 
+	contact(void);
+	~contact(void);
+
+	// la liste des fonctions membres ( getters et setters) ?? 
+
+};
 
 
 // Creation de la classe contact 
