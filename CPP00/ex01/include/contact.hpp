@@ -6,46 +6,51 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 16:48:05 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/11/30 11:40:59 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/02 19:24:33 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
-class contact {
+// class commencent par majuscule !!
+
+class Contact {
 	private:
-	// element prives
+	std::string firstName;
+	std::string lastName;
+	std::string nickName;
+	std::string phoneNumber;
+	std::string darkestSecret;
 
 	public:
 	// trucs public 
-	
-	// truc de constructeur / destructeur que je sais pas ou mettre 
-	contact(void);
-	~contact(void);
+	// truc de constructeur / destructeur a mettre au debu t?
+	Contact();
+	~Contact();
 
 	// la liste des fonctions membres ( getters et setters) ?? 
 
+	// setter permet d'enregistrer les donnees du contact
+	// sert a enrehistre ds les truc prives, donc ne retourne RIEN. Tout void
+	void	setFirstName(const std::string &fname);
+	void	setLastName(const std::string &lname);
+	void	setNickName(const std::string &nname);
+	void	setPhoneNumber(const std::string &pnumber);
+	void	setDarkestSecret(const std::string &dsecret);
+
+	// getter permets d'afficher les donnees du contact
+	// il va recup et lire le truc prive donc il retoourne une string
+	std::string getFirstName() const;
+	std::string getLastName() const;
+	std::string getNickName() const;
+	std::string getPhoneNumber() const;
+	std::string getDarkestSecret() const;
+	
+	// le const des methodes se met apres les parentheses
+	// empeche de modifier l'objet
+
 };
-
-
-// Creation de la classe contact 
-
-// doit contenir les champs prives : ( que des strings)
-// firstName
-// lastName
-// nickname
-// phoneNumber
-// darkestSecret
-
-// et les methodes publiques pour definir et obtenir ces champs
-// a chaque fois 1 fonction "set" par champ
-// ex : void setFirstName(const std::string& fname);
-// ...
-
-// puis stocke ds les string en const ? car ca ne doit pas changer
-
-// ATTENTION NE PAS OUBLIER ; A LA FIN DE LA CLASSE
 
 #endif
 

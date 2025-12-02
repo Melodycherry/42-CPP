@@ -36,7 +36,7 @@ int main ()
 {
 	std::cout << "My awesome PhoneBook" << std::endl;
 	
-	phonebook	MyPhoneBook; // instance ?? va executer le constructeur et destructeur ? 
+	Phonebook	MyPhoneBook; // instance ?? va executer le constructeur et destructeur ? 
 
 	// TEST
 	MyPhoneBook.test();

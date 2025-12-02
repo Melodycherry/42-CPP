@@ -6,21 +6,63 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 17:29:05 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/11/30 11:40:31 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/02 19:53:24 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 
 // definir le constructeur
-contact::contact(void){
+Contact::Contact(){
 	return;
 }
 
 // definir le destructeur
-contact::~contact(){
+Contact::~Contact(){
 	return;
 }
 
 // mettre ici les fonctions de get et set ? 
 // pour chaque element 
+
+void	Contact::setFirstName(const std::string &fname){
+	
+}
+
+void	Contact::setLastName(const std::string &lname){
+	
+}
+
+void	Contact::setNickName(const std::string &nname){
+	
+}
+
+void	Contact::setPhoneNumber(const std::string &pnumber){
+	
+}
+
+void	Contact::setDarkestSecret(const std::string &dsecret){
+	
+}
+
+
+// check si condition particuliere 
+std::string Contact::getFirstName() const{
+	return this->firstName;
+}
+
+std::string Contact::getLastName() const{
+	return this->lastName;
+}
+
+std::string Contact::getNickName() const{
+	return this->nickName;
+}
+
+std::string Contact::getPhoneNumber() const{
+	return this->phoneNumber;
+}
+
+std::string Contact::getDarkestSecret() const{
+	return this->darkestSecret;
+}
