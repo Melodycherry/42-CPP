@@ -6,11 +6,11 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 17:29:05 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/02 19:53:24 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/03 15:15:50 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
 
 // definir le constructeur
 Contact::Contact(){
@@ -26,23 +26,23 @@ Contact::~Contact(){
 // pour chaque element 
 
 void	Contact::setFirstName(const std::string &fname){
-	
+	this->firstName = fname;
 }
 
 void	Contact::setLastName(const std::string &lname){
-	
+	this->lastName = lname;
 }
 
 void	Contact::setNickName(const std::string &nname){
-	
+	this->nickName = nname;
 }
 
 void	Contact::setPhoneNumber(const std::string &pnumber){
-	
+	this->phoneNumber = pnumber;
 }
 
 void	Contact::setDarkestSecret(const std::string &dsecret){
-	
+	this->darkestSecret = dsecret;
 }
 
 

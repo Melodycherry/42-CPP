@@ -10,18 +10,40 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "PhoneBook.hpp"
 
-// on doit faire une boucle infinie 
+int main ()
+{
+	PhoneBook	MyPhoneBook; // instance ?? va executer le constructeur et destructeur ? 
 
-// on doit demander l'input a l'utilisateur 
-// utilisation de get line ? 
+	// TEST
+	MyPhoneBook.test();
+	// string commande ? 
+	
+	// mettre les instruction ici ? un message d'accueil? 
+	// ex : welcome
+	// instructions pour add, search et exit 
 
-// if ADD 
-// -> fonction add contact
+	while (1) // ou while commande pas exit ? 
+	{
+		// mess pour entrer une commande 
+		// get line pour lire la commande
 
-// else if SEARCH
-// -> fonction search contact
+		// if comande == add
+		// MyPhoneBook.addContact();
+		// else if == search
+		// MyPhoneBook.searchContact();
+		// else if == exit
+		// break; ?? // ne pas utiliser exit attentiiiiion
+
+		// aussi else final pour invalid commande
+		// mess d'erreur a faire 
+	}
+
+	// mettre message de fin de programme ici ?
+	return (0);
+}
+
 
 // else if EXIT
 // -> exit(0); // ne pas utiliser exit en tant que tel car interdit en CPP
@@ -31,24 +53,3 @@
 // else
 // -> print message d'erreur ( a definir ? )
 // check si on doit free des trucs avant de quitter ?? again ?? attention FREE non plus on peut pas utiliser
-
-int main ()
-{
-	std::cout << "My awesome PhoneBook" << std::endl;
-	
-	Phonebook	MyPhoneBook; // instance ?? va executer le constructeur et destructeur ? 
-
-	// TEST
-	MyPhoneBook.test();
-	
-	// mettre les instruction ici ? un message ? 
-
-	// boucle infinie here 
-	// while (1)
-	// {
-
-	// }
-
-	return (0);
-}
-
