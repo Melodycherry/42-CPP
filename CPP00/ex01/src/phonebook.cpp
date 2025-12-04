@@ -6,51 +6,92 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 17:29:12 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/03 18:44:31 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/04 16:38:15 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-// definir le constructeur
-PhoneBook::PhoneBook(void) /*: index(0), numContacts(0)*/ {
-	// init en haut, pas a l'intereiru ? 
-	// a modif en fonction de comment appeler les index 
+// Constructeur
+PhoneBook::PhoneBook(void): numContacts(0), index(0) {
 	return;
 }
 
-// def le destructeur
+// Destructeur
 PhoneBook::~PhoneBook(void){
-	// tt ok ici a priori rien a free 
 	return;
 }
 
-// fonctions de phonebook a metttre ? 
+// Fonctions membres
+
 void	PhoneBook::addContact(void){
 	
 	Contact	newContact;
 	std::string	input;
 
-	// demander les infos une par une
+	// attention trouver un moyen de faire une boucle pour chaque champs sinon ca revient a enter command
+	// faire boucle infinie again ? et break qd le champs est rempli ?? 
+
+	// faire 2 verif separee ? 
+	// une premiere verif pour emtpy string 
+	// une deuxiemen verif pour valid input avec mess plus precis ? 
+	// ex : name cannot contain digits 
+	// ex : phone number should be ... blabla 
+
 	std::cout << "Enter first name: ";
 	std::getline(std::cin, input);
-	// faire une veirif ici pour input vide
-	// car sujet dit contact can't have empty field, donc faire un mess erreur si vide ? ou boucle tant que vide ? 
+	if (input.empty()){ // changer pour is valide input pour gerer vide ET space only par exemple
+		std::cout << "Error: First name cannot be empty." << std::endl;
+		return;
+	}
 	newContact.setFirstName(input);
 
-	// faire meme chose pour les autres infos ?? x 5 ?
-	// tout mettre dans la meme fonction ? 
+	std::cout << "Enter last name: ";
+	std::getline(std::cin, input);
+	if ( input.empty()){ // changer pour is valide input pour gerer vide ET space only par exemple
+		std::cout << "Error: Last name cannot be empty" << std::endl;
+		return;
+	}
+	newContact.setLastName(input);
+	
+	std::cout << "Enter nickname: ";
+	std::getline(std::cin, input);
+	if ( input.empty()){ // changer pour is valide input pour gerer vide ET space only par exemple
+		std::cout << "Error: nickname cannot be empty" << std::endl;
+		return;
+	}
+	newContact.setNickName(input);
 
+	std::cout << "Enter phone number: ";
+	std::getline(std::cin, input);
+	if ( input.empty()){ // changer pour gerer only digit et aussi + ou - ?? et parentheses ? 
+		std::cout << "Error: phone number cannot be empty" << std::endl;
+		return;
+	}
+	// extra verif ?? 
+	//std::cout << "Please enter a valid phone number" << std::endl;
+	// ou mettre extra mess template +xx xxx xx xx ??
+	newContact.setNickName(input);
+
+	std::cout << "Enter darkest secret: ";
+	std::getline(std::cin, input);
+	if ( input.empty()){ // changer pour is valide input pour gerer vide ET space only par exemple
+		std::cout << "Error: secret cannot be empty ( go ahead, no jugement ...)" << std::endl;
+		return;
+	}
+	newContact.setNickName(input);
+	
 	// enregistrer le contact ds le tableau 
 	contacts[index] = newContact;
 
 	//mise a jour des index et compteurs 
 	// faire circular buffer ?? pour revenir au debut ? 
-	// index = (index + 1) % 8; ?? 
+	index = (index + 1) % 8;
 	if (numContacts < 8) 
 		numContacts++;
 	
 	// mettre un message de confirmation ?
+	std::cout << "Contact succesfully added !" << std::endl;
 }
 
 void	PhoneBook::displayContacts(void){
@@ -86,11 +127,13 @@ void	PhoneBook::searchContact(void){
 // *************************************************//	
 //TEST
 void	PhoneBook::test(void){
-	std::cout << "test function" << std::endl;
+	std::cout << "--- TEST FONCTION ---" << std::endl;
+	// afficher ce qui a ete entrer pour verification
 	std::string str;
-	std::cin >> str;
+	// afficher le prenom du contact a l'index 0 
+	str = "First Name of contact at index 0: " + contacts[0].getFirstName();
 	std::cout << str << std::endl;
 	return;
 }
-
+// *************************************************//	
 

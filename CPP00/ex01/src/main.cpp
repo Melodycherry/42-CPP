@@ -15,32 +15,34 @@
 int main ()
 {
 	PhoneBook	MyPhoneBook; // instance ?? va executer le constructeur et destructeur ? 
-
-	// TEST
-	MyPhoneBook.test();
-	// string commande ? 
+	
+	std::string command;
 	
 	// mettre les instruction ici ? un message d'accueil? 
 	// ex : welcome
 	// instructions pour add, search et exit 
 
+	std::cout << "Welcome to your PhoneBook!" << std::endl;
+	std::cout << "Available commands: ADD, SEARCH, EXIT" << std::endl;
+
 	while (1) // ou while commande pas exit ? 
 	{
-		// mess pour entrer une commande 
-		// get line pour lire la commande
+		std::cout << "Enter command: ";
+		std::getline(std::cin, command);
 
-		// if comande == add
-		// MyPhoneBook.addContact();
-		// else if == search
-		// MyPhoneBook.searchContact();
-		// else if == exit
-		// break; ?? // ne pas utiliser exit attentiiiiion
-
-		// aussi else final pour invalid commande
-		// mess d'erreur a faire 
+		if ( command == "ADD" )
+			MyPhoneBook.addContact();
+		else if ( command == "SEARCH" )
+			MyPhoneBook.searchContact();
+		else if ( command == "EXIT" )
+			break ;
+		else
+			std::cout << "Invalid command. Please enter ADD, SEARCH, or EXIT." << std::endl;
 	}
-
 	// mettre message de fin de programme ici ?
+
+	//TEST
+	MyPhoneBook.test();
 	return (0);
 }
 
