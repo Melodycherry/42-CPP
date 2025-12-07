@@ -6,18 +6,16 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 17:29:12 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/07 16:14:02 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/07 21:54:25 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-// Constructeur
 PhoneBook::PhoneBook(void): numContacts(0), index(0) {
 	return;
 }
 
-// Destructeur
 PhoneBook::~PhoneBook(void){
 	return;
 }
@@ -107,29 +105,83 @@ void	PhoneBook::addContact(void){
 void	PhoneBook::displayContacts(void){
 	// premiere verif si numContacts == 0
 	// message pour dire que le phonebook est vide
+	if (numContacts == 0){
+		std::cout << "Phonebook is empty. Use the ADD command to add a contact first" << std::endl;
+		return;
+	}
 
 	// afficher l'entete de tableau a remplir
-	// faire mise en forme jolie 
+	// faire mise en forme jolie ??
 	// sujet dit : |  Index   |First Name| Last Name | Nickname  |
+	std::cout << std::endl;
+	std::cout << std::setw(10) << "Index" << "|";
+    std::cout << std::setw(10) << "First Name" << "|";
+    std::cout << std::setw(10) << "Last Name" << "|";
+    std::cout << std::setw(10) << "Nickname" << std::endl;
+    std::cout << "---------------------------------------------" << std::endl;
 
 	// ensuite boucle pour afficher chaque contact
-	// attention tronquer les strings si c'est trop long et remplace par ...
-	// et aussi sujet dit RIGHT ALIGNED 
-	// faire une fonction pour ca a mettre dans phonebook ? 
+	// attention tronquer les strings si c'est trop long et remplace par '.'
+	// et aussi sujet dit RIGHT ALIGNED ( ok, comme ca par defaut)
+	// faire une fonction pour ca a mettre dans phonebook ? OK
+
+	for ( int i = 0 ; i < numContacts ; i++){
+		std::cout << std::setw(10) << i << "|";
+		std::cout << std::setw(10) << truncateString(contacts[i].getFirstName()) << "|";
+		std::cout << std::setw(10) << truncateString(contacts[i].getLastName()) << "|";
+		std::cout << std::setw(10) << truncateString(contacts[i].getNickName()) << std::endl;
+		
+	}
 }
 
 void	PhoneBook::searchContact(void){
 	// first on doit display les contacts ( donc fonction au dessus )
-	// si y en a pas, message juste return ( mess deja ds display)
+	displayContacts();
 	
-	// prompt ppour demander l'index
-	// verif si input est valide
-	// et verif si existe ? deja rempli ou pas ( out of range, define a relevant behavior)
+	// si y en a pas, message juste return ( mess deja ds display)
+	if ( numContacts == 0)
+		return;
+	
+	std::string input;
+	int index;
+		
+	while (true){
+		// prompt ppour demander l'index
+		std::cout << "Enter the index of contact to display: ";
+		std::getline(std::cin, input);
+		
+		// verif si input est valide
+		// si empty, si leght est sup a 1 si c'est pas digit pour input[0]
+		// mess : error invalid index et return
+		if (input.empty() || input.length() > 1 || !isdigit(input[0])){
+			std::cout << "Error : Invalid index" << std::endl;
+			continue;
+		}
 
+		//conversion en char
+		index = input[0] - '0';
+		
+		// verif si existe
+		// et verif si existe ? deja rempli ou pas ( out of range, define a relevant behavior)
+		if ( index < 0 || index >= numContacts){
+			std::cout << "Error : Index out of range" << std::endl;
+			continue;
+		}
+		break;
+	}
+	
 	// afficher les infos du contact 
 	// ligne
 	// par
 	// ligne !!
+	std::cout << std::endl;
+	std::cout << "-------- Contact detail --------" << std::endl;
+	std::cout << "First name: " << contacts[index].getFirstName() << std::endl;
+	std::cout << "Last name: " << contacts[index].getLastName() << std::endl;
+	std::cout << "Nickname: " << contacts[index].getNickName() << std::endl;
+	std::cout << "Phone number: " << contacts[index].getPhoneNumber() << std::endl;
+	std::cout << "Darkest secret: " << contacts[index].getDarkestSecret() << std::endl;
+	std::cout << std::endl;
 }
 
 bool PhoneBook::isEmptyOrSpaces(const std::string &str) const {
@@ -164,11 +216,17 @@ bool PhoneBook::isValidPhoneNumber(const std::string &str) const {
     return true;
 }
 
+std::string PhoneBook::truncateString(const std::string &str) const {
+    if (str.length() > 10)
+        return str.substr(0, 9) + ".";
+    return str;
+}
+
 // *************************************************//	
 //TEST
 void	PhoneBook::test(void){
 	std::cout << "--- TEST FONCTION ---" << std::endl;
-	// afficher ce qui a ete entrer pour verification
+	// afficher ce qui a ete entre pour verification
 	std::string str;
 	// afficher le prenom du contact a l'index 0 
 	str = "First Name of contact at index 0: " + contacts[0].getFirstName();

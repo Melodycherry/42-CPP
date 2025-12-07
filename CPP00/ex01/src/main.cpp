@@ -18,8 +18,16 @@ int main ()
 	
 	std::string command;
 
-	std::cout << "Welcome to your PhoneBook!" << std::endl;
-	std::cout << "Available commands: ADD, SEARCH, EXIT" << std::endl;
+	//std::cout << "Welcome to your PhoneBook!" << std::endl;
+	//std::cout << "Available commands: ADD, SEARCH, EXIT" << std::endl;
+	
+	std::cout << std::endl;
+	std::cout << "📟 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~📟 " << std::endl;
+	std::cout << "📟       Welcome to your PhoneBook!         📟 " << std::endl;
+	std::cout << "📟 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~📟 " << std::endl;
+	std::cout << std::endl;
+	std::cout << "➤ Commands → ADD | SEARCH | EXIT" << std::endl;
+	std::cout << std::endl;
 
 	while (true)
 	{
@@ -33,7 +41,7 @@ int main ()
 		else if ( command == "EXIT" )
 			break ;
 		else
-			std::cout << "Invalid command. Please enter ADD, SEARCH, or EXIT." << std::endl;
+			std::cout << "Invalid command: Please enter ADD, SEARCH, or EXIT." << std::endl;
 	}
 	
 	std::cout << "Thank you for using PhoneBook" << std::endl;

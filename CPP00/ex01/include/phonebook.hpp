@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 18:40:05 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/07 16:06:03 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/07 21:22:29 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "Contact.hpp"
 
 class PhoneBook{
@@ -29,7 +30,7 @@ class PhoneBook{
 	bool	isValidName(const std::string &str) const;
 	bool	isValidPhoneNumber(const std::string &str) const;
 	// truncate string pour display a faire plus tard 
-
+	std::string truncateString(const std::string &str) const;
 
 	public:
 	PhoneBook(void);
