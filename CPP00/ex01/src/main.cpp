@@ -14,18 +14,14 @@
 
 int main ()
 {
-	PhoneBook	MyPhoneBook; // instance ?? va executer le constructeur et destructeur ? 
+	PhoneBook	MyPhoneBook;
 	
 	std::string command;
-	
-	// mettre les instruction ici ? un message d'accueil? 
-	// ex : welcome
-	// instructions pour add, search et exit 
 
 	std::cout << "Welcome to your PhoneBook!" << std::endl;
 	std::cout << "Available commands: ADD, SEARCH, EXIT" << std::endl;
 
-	while (1) // ou while commande pas exit ? 
+	while (true)
 	{
 		std::cout << "Enter command: ";
 		std::getline(std::cin, command);
@@ -39,10 +35,11 @@ int main ()
 		else
 			std::cout << "Invalid command. Please enter ADD, SEARCH, or EXIT." << std::endl;
 	}
-	// mettre message de fin de programme ici ?
+	
+	std::cout << "Thank you for using PhoneBook" << std::endl;
 
 	//TEST
-	MyPhoneBook.test();
+	//MyPhoneBook.test();
 	return (0);
 }
 
@@ -51,7 +48,3 @@ int main ()
 // -> exit(0); // ne pas utiliser exit en tant que tel car interdit en CPP
 // sujet dit : programme quit and contact lost forever 
 // check si on doit free des trucs avant de quitter ?? et ou ?? destructeur ? 
-
-// else
-// -> print message d'erreur ( a definir ? )
-// check si on doit free des trucs avant de quitter ?? again ?? attention FREE non plus on peut pas utiliser

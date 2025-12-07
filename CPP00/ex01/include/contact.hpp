@@ -1,19 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 16:48:05 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/02 19:24:33 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/07 15:56:29 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
-
-// class commencent par majuscule !!
 
 class Contact {
 	private:
@@ -24,8 +22,6 @@ class Contact {
 	std::string darkestSecret;
 
 	public:
-	// trucs public 
-	// truc de constructeur / destructeur a mettre au debu t?
 	Contact();
 	~Contact();
 

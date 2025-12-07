@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 18:40:05 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/03 18:45:24 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/07 16:06:03 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 #include <string>
 #include "Contact.hpp"
 
-// creation de la classe phonebook
-
 class PhoneBook{
 
 	private:
@@ -26,13 +24,18 @@ class PhoneBook{
 	int		numContacts;
 	int		index;
 
+	// fonctions utiles 
+	bool	isEmptyOrSpaces(const std::string &str) const;
+	bool	isValidName(const std::string &str) const;
+	bool	isValidPhoneNumber(const std::string &str) const;
+	// truncate string pour display a faire plus tard 
+
+
 	public:
-	// constructeur et destructeur again 
 	PhoneBook(void);
 	~PhoneBook(void);
 
-	// fonctions 
-
+	// Fonctions principales 
 	void	addContact(void);
 	void	displayContacts(void);
 	void	searchContact(void);

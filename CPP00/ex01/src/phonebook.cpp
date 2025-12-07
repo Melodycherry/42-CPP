@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 17:29:12 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/04 16:38:15 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/07 16:14:02 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,57 +29,67 @@ void	PhoneBook::addContact(void){
 	Contact	newContact;
 	std::string	input;
 
-	// attention trouver un moyen de faire une boucle pour chaque champs sinon ca revient a enter command
-	// faire boucle infinie again ? et break qd le champs est rempli ?? 
-
-	// faire 2 verif separee ? 
-	// une premiere verif pour emtpy string 
-	// une deuxiemen verif pour valid input avec mess plus precis ? 
-	// ex : name cannot contain digits 
-	// ex : phone number should be ... blabla 
-
-	std::cout << "Enter first name: ";
-	std::getline(std::cin, input);
-	if (input.empty()){ // changer pour is valide input pour gerer vide ET space only par exemple
-		std::cout << "Error: First name cannot be empty." << std::endl;
-		return;
+	while (true){
+		std::cout << "Enter first name: ";
+		std::getline(std::cin, input);
+		if (isEmptyOrSpaces(input))
+			std::cout << "Error: First name cannot be empty." << std::endl;
+		else if (!isValidName(input))
+			std::cout << "Please enter a valid first name (letters, spaces, hyphens and apostrophes)" << std::endl;
+		else{
+			newContact.setFirstName(input);
+			break;
+		}	
 	}
-	newContact.setFirstName(input);
 
-	std::cout << "Enter last name: ";
-	std::getline(std::cin, input);
-	if ( input.empty()){ // changer pour is valide input pour gerer vide ET space only par exemple
-		std::cout << "Error: Last name cannot be empty" << std::endl;
-		return;
+	while (true){
+		std::cout << "Enter last name: ";
+		std::getline(std::cin, input);
+		if (isEmptyOrSpaces(input))
+			std::cout << "Error: Last name cannot be empty." << std::endl;
+		else if (!isValidName(input))
+			std::cout << "Please enter a valid last name (letters, spaces, hyphens and apostrophes)" << std::endl;
+		else{
+			newContact.setLastName(input);
+			break;
+		}
 	}
-	newContact.setLastName(input);
 	
-	std::cout << "Enter nickname: ";
-	std::getline(std::cin, input);
-	if ( input.empty()){ // changer pour is valide input pour gerer vide ET space only par exemple
-		std::cout << "Error: nickname cannot be empty" << std::endl;
-		return;
+	while (true){
+		std::cout << "Enter nickname: ";
+		std::getline(std::cin, input);
+		if (isEmptyOrSpaces(input))
+			std::cout << "Error: nickname cannot be empty" << std::endl;
+		else{
+			newContact.setNickName(input);
+			break;
+		}
 	}
-	newContact.setNickName(input);
-
-	std::cout << "Enter phone number: ";
-	std::getline(std::cin, input);
-	if ( input.empty()){ // changer pour gerer only digit et aussi + ou - ?? et parentheses ? 
-		std::cout << "Error: phone number cannot be empty" << std::endl;
-		return;
+	
+	while (true){
+		std::cout << "Enter phone number: ";
+		std::getline(std::cin, input);
+		if (isEmptyOrSpaces(input))
+			std::cout << "Error: phone number cannot be empty" << std::endl;
+		else if (!isValidPhoneNumber(input))
+			std::cout << "Error: Phone number can only contain digits, spaces, '+', '-', and parenthesis " << std::endl;
+			// ajout exemple 
+		else{
+			newContact.setPhoneNumber(input);
+			break;
+		}
 	}
-	// extra verif ?? 
-	//std::cout << "Please enter a valid phone number" << std::endl;
-	// ou mettre extra mess template +xx xxx xx xx ??
-	newContact.setNickName(input);
-
-	std::cout << "Enter darkest secret: ";
-	std::getline(std::cin, input);
-	if ( input.empty()){ // changer pour is valide input pour gerer vide ET space only par exemple
-		std::cout << "Error: secret cannot be empty ( go ahead, no jugement ...)" << std::endl;
-		return;
+	
+	while (true){
+		std::cout << "Enter darkest secret: ";
+		std::getline(std::cin, input);
+		if (isEmptyOrSpaces(input))
+			std::cout << "Error: secret cannot be empty ( go ahead, no jugement ...)" << std::endl;
+		else {
+			newContact.setDarkestSecret(input);
+			break;
+		}
 	}
-	newContact.setNickName(input);
 	
 	// enregistrer le contact ds le tableau 
 	contacts[index] = newContact;
@@ -91,7 +101,7 @@ void	PhoneBook::addContact(void){
 		numContacts++;
 	
 	// mettre un message de confirmation ?
-	std::cout << "Contact succesfully added !" << std::endl;
+	std::cout << "Contact succesfully added to the PhoneBook !" << std::endl;
 }
 
 void	PhoneBook::displayContacts(void){
@@ -122,7 +132,37 @@ void	PhoneBook::searchContact(void){
 	// ligne !!
 }
 
+bool PhoneBook::isEmptyOrSpaces(const std::string &str) const {
+    if (str.empty())
+        return true;
+    for (size_t i = 0; i < str.length(); i++) {
+        if (!std::isspace(str[i]))
+            return false;
+    }
+    return true;  // que des espaces
+}
 
+bool PhoneBook::isValidName(const std::string &str) const {
+    for (size_t i = 0; i < str.length(); i++) {
+        // lettres, tiret, espace, apostrophe
+        if (!std::isalpha(str[i]) && str[i] != '-' && 
+            str[i] != ' ' && str[i] != '\'') {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool PhoneBook::isValidPhoneNumber(const std::string &str) const {
+    for (size_t i = 0; i < str.length(); i++) {
+        // chiffres, espaces, +, -, ( et )
+        if (!std::isdigit(str[i]) && str[i] != ' ' && str[i] != '+' && 
+            str[i] != '-' && str[i] != '(' && str[i] != ')') {
+            return false;
+        }
+    }
+    return true;
+}
 
 // *************************************************//	
 //TEST
