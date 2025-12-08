@@ -1,7 +1,7 @@
 # ⚙️ Piscine CPP — Modules 00 à 09  
 
 Découverte progressive des concepts fondamentaux de la programmation orientée objet en C++.  
-La Piscine CPP est composée de **10 modules**, chacun introduisant un nouveau concept essentiel : ... ( a completer )  
+La Piscine CPP est composée de **10 modules**, chacun introduisant un nouveau concept essentiel : classes, héritage, polymorphisme, exceptions, template ...  
 Chaque module contient plusieurs exercices, à réaliser et valider indépendamment.
 
 ---
@@ -11,13 +11,29 @@ Chaque module contient plusieurs exercices, à réaliser et valider indépendamm
 ### 🧩 Module 00 — Bases du C++  
 Introduction au langage C++ et premières manipulations :  
 *Namespace, classes, member functions, stdio streams, initialization lists, static, const, and some other basic stuff*  
-EX 00 : Megaphone  
-EX 01 : My Awesome Phonebook  
+
+EX 00 : Megaphone ✅     
+EX 01 : My Awesome Phonebook ✅     
 EX 02 : The Job Of Your Dreams  
+
+📅 Date de rendu : *à définir*  
+📝 Note obtenue : *en attente*
 
 ---
 
-### 🧱 Module 01  
+### 🧱 Module 01 - Mémoire & Références     
+*Memory allocation (new, delete), pointers to members, references and switch statements*  
+
+EX 00 : BraiiiiiiinnnzzzZ        
+EX 01 : Moar brainz!     
+EX 02 : HI THIS IS BRAIN  
+EX 03 : Unnecessary violence  
+EX 04 : Sed is for losers  
+EX 05 : Harl 2.0  
+EX 06 : Harl filter  
+
+📅 Date de rendu : *à définir*  
+📝 Note obtenue : *en attente*
 
 ---
 
@@ -66,9 +82,4 @@ EX 02 : The Job Of Your Dreams
 • 🏛️ Bases solides de la POO en C++  
 
 
----
-
-## ✅ STATUT  
-📅 Date de rendu : *à définir*  
-📝 Note obtenue : *en attente*
 
