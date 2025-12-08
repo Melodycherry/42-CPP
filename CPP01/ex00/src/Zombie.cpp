@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/24 18:09:57 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/08 22:41:38 by mlaffita         ###   ########.fr       */
+/*   Created: 2025/12/08 23:30:58 by mlaffita          #+#    #+#             */
+/*   Updated: 2025/12/08 23:49:12 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Zombie.hpp"
 
-int main (int ac, char **av)
-{
-	if (ac < 2)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return (0);
-	}
-	else
-	{
-		for ( int i = 1 ; i < ac ; i++)
-		{
-			std::string str = av[i];
-			for (int j = 0 ; str[j] ; j++)
-				str[j] = std::toupper(str[j]);
-			std::cout << str;
-		} 
-	}
-	std::cout << std::endl;
-	return (0);
-}
+// Constructor
+
+// destructeur 
+// must print a message with the name of zombie for debugging purpose 
+
+// fonction announce ici 
