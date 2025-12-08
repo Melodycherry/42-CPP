@@ -17,9 +17,6 @@ int main ()
 	PhoneBook	MyPhoneBook;
 	
 	std::string command;
-
-	//std::cout << "Welcome to your PhoneBook!" << std::endl;
-	//std::cout << "Available commands: ADD, SEARCH, EXIT" << std::endl;
 	
 	std::cout << std::endl;
 	std::cout << "📟 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~📟 " << std::endl;
@@ -27,11 +24,10 @@ int main ()
 	std::cout << "📟 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~📟 " << std::endl;
 	std::cout << std::endl;
 	std::cout << "➤ Commands → ADD | SEARCH | EXIT" << std::endl;
-	std::cout << std::endl;
 
 	while (true)
 	{
-		std::cout << "Enter command: ";
+		std::cout << "\nEnter command: ";
 		std::getline(std::cin, command);
 
 		if ( command == "ADD" )
@@ -44,15 +40,8 @@ int main ()
 			std::cout << "Invalid command: Please enter ADD, SEARCH, or EXIT." << std::endl;
 	}
 	
-	std::cout << "Thank you for using PhoneBook" << std::endl;
+	std::cout << "\n ♡ Thank you for using PhoneBook ♡ " << std::endl;
 
-	//TEST
-	//MyPhoneBook.test();
 	return (0);
 }
 
-
-// else if EXIT
-// -> exit(0); // ne pas utiliser exit en tant que tel car interdit en CPP
-// sujet dit : programme quit and contact lost forever 
-// check si on doit free des trucs avant de quitter ?? et ou ?? destructeur ? 

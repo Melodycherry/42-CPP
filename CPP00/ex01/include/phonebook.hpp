@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 18:40:05 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/07 21:22:29 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/08 23:21:16 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ class PhoneBook{
 	int		numContacts;
 	int		index;
 
-	// fonctions utiles 
+	// Fonctions utiles 
 	bool	isEmptyOrSpaces(const std::string &str) const;
 	bool	isValidName(const std::string &str) const;
 	bool	isValidPhoneNumber(const std::string &str) const;
-	// truncate string pour display a faire plus tard 
 	std::string truncateString(const std::string &str) const;
 
 	public:
@@ -40,9 +39,6 @@ class PhoneBook{
 	void	addContact(void);
 	void	displayContacts(void);
 	void	searchContact(void);
-
-	//TEST
-	void	test(void);
 };
 
 #endif
