@@ -6,12 +6,14 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 16:48:05 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/08 22:43:08 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/09 16:07:15 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
+
+#include <string>
 
 class Contact {
 	private:
