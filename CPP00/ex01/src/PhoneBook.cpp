@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 17:29:12 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/09 16:09:56 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/09 18:33:21 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void	PhoneBook::addContact(void){
 
 	while (true){
 		std::cout << "	➔ Enter first name: ";
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			return;
 		if (isEmptyOrSpaces(input))
 			std::cout << "Error: First name cannot be empty." << std::endl;
 		else if (!isValidName(input))
@@ -40,7 +41,8 @@ void	PhoneBook::addContact(void){
 
 	while (true){
 		std::cout << "	➜ Enter last name: ";
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			return;
 		if (isEmptyOrSpaces(input))
 			std::cout << "Error: Last name cannot be empty." << std::endl;
 		else if (!isValidName(input))
@@ -53,7 +55,8 @@ void	PhoneBook::addContact(void){
 	
 	while (true){
 		std::cout << "	➜ Enter nickname: ";
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			return;
 		if (isEmptyOrSpaces(input))
 			std::cout << "Error: nickname cannot be empty" << std::endl;
 		else{
@@ -64,7 +67,8 @@ void	PhoneBook::addContact(void){
 	
 	while (true){
 		std::cout << "	➜ Enter phone number: ";
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			return;
 		if (isEmptyOrSpaces(input))
 			std::cout << "Error: phone number cannot be empty" << std::endl;
 		else if (!isValidPhoneNumber(input)){
@@ -81,7 +85,8 @@ void	PhoneBook::addContact(void){
 	
 	while (true){
 		std::cout << "	➜ Enter darkest secret: ";
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			return;
 		if (isEmptyOrSpaces(input))
 			std::cout << "Error: secret cannot be empty ( go ahead, no jugement ...)" << std::endl;
 		else {
@@ -133,7 +138,8 @@ void	PhoneBook::searchContact(void){
 		
 	while (true){
 		std::cout << "\nEnter the index of contact to display: ";
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			return;
 		
 		if (input.empty() || input.length() > 1 || !isdigit(input[0])){
 			std::cout << "Error : Invalid index" << std::endl;
