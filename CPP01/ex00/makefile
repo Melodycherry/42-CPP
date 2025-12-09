@@ -6,15 +6,16 @@
 #    By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/08 23:30:02 by mlaffita          #+#    #+#              #
-#    Updated: 2025/12/08 23:36:45 by mlaffita         ###   ########.fr        #
+#    Updated: 2025/12/09 18:52:49 by mlaffita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = brainz
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
-OBJS = $(SRCS:.cpp=.o)
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -I include/
+SRCS = src/main.cpp src/Zombie.cpp src/newZombie.cpp src/randomChump.cpp
+OBJDIR = obj
+OBJS = $(SRCS:src/%.cpp=obj/%.o)
 
 all: $(NAME)
 

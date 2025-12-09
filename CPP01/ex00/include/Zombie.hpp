@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 23:30:54 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/09 17:34:43 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/09 18:40:55 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,12 @@
 
 class Zombie {
 	private:
-	// stuff
-	// private string attribute name
 	std::string name;
 
 	public:
-	// constructors and destructor
 	Zombie(void);
 	~Zombie(void);
 	
-	//stuff
-	// member function void announce
 	void	announce( void );
 	
 };

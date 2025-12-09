@@ -16,8 +16,8 @@ EX 00 : Megaphone ✅
 EX 01 : My Awesome Phonebook ✅     
 EX 02 : The Job Of Your Dreams  
 
-📅 Date de rendu : *à définir*  
-📝 Note obtenue : *en attente*
+📅 Date de rendu : 09-12-2025  
+📝 Note obtenue : 80/100  
 
 ---
 

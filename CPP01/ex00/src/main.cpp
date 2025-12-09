@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 23:30:20 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/08 23:52:05 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/09 18:45:56 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main( void )
 {
-	// do stuff 
+	Zombie Zombie;
 	
 	return (0);
 }
