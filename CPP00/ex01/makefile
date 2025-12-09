@@ -6,14 +6,14 @@
 #    By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/29 17:30:02 by mlaffita          #+#    #+#              #
-#    Updated: 2025/11/29 18:00:36 by mlaffita         ###   ########.fr        #
+#    Updated: 2025/12/09 16:14:58 by mlaffita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
+NAME = PhoneBook
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -I include/
-SRCS = src/main.cpp src/contact.cpp src/phonebook.cpp
+SRCS = src/main.cpp src/Contact.cpp src/PhoneBook.cpp
 OBJDIR = obj
 OBJS = $(SRCS:src/%.cpp=obj/%.o)
 

@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 16:48:05 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/09 16:07:15 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/09 16:28:51 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ class Contact {
 	std::string getPhoneNumber() const;
 	std::string getDarkestSecret() const;
 
+	
 };
 
 #endif

@@ -30,11 +30,11 @@ int main ()
 		std::cout << "\nEnter command: ";
 		std::getline(std::cin, command);
 
-		if ( command == "ADD" )
+		if ( command == "ADD" || command == "add" )
 			MyPhoneBook.addContact();
-		else if ( command == "SEARCH" )
+		else if ( command == "SEARCH" || command == "search" )
 			MyPhoneBook.searchContact();
-		else if ( command == "EXIT" )
+		else if ( command == "EXIT" || command == "exit" )
 			break ;
 		else
 			std::cout << "Invalid command: Please enter ADD, SEARCH, or EXIT." << std::endl;
