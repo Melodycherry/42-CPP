@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/08 23:31:51 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/11 17:28:39 by mlaffita         ###   ########.fr       */
+/*   Created: 2025/12/11 17:40:18 by mlaffita          #+#    #+#             */
+/*   Updated: 2025/12/11 17:41:41 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
+#include <string>
 #include "Zombie.hpp"
 
-/**
- * @brief Va cree un zombie sur la HEAP
- * Utile qd le zombie doit survivre apres la fonction 
- * @param name 
- * @return Zombie* 
- */
-
-Zombie *newZombie( std::string name ){
-	Zombie *z = new Zombie(name);
-	return z;
+int main ()
+{
+	return (0);	
 }
