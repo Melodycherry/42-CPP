@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/08 23:30:54 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/09 18:40:55 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/10 17:23:29 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,11 @@ class Zombie {
 	std::string name;
 
 	public:
-	Zombie(void);
+	Zombie(std::string name);
 	~Zombie(void);
 	
-	void	announce( void );
+	void	announce(void);
 	
 };
 
 #endif
-
-// "you have to determine in which case it is better to allocate zombie on the stack or on the heap" 
-// check that , les diff et comment implementer 
