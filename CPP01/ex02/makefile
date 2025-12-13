@@ -6,14 +6,14 @@
 #    By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/08 23:30:02 by mlaffita          #+#    #+#              #
-#    Updated: 2025/12/13 16:58:45 by mlaffita         ###   ########.fr        #
+#    Updated: 2025/12/13 17:24:13 by mlaffita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = HITHISISBRAIN
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = main.cpp
+SRCS = src/main.cpp
 OBJDIR = obj
 OBJS = $(SRCS:src/%.cpp=obj/%.o)
 
