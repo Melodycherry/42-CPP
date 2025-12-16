@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 17:34:45 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/13 20:57:37 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/16 16:48:34 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,22 @@ class HumanB{
 	
 	private:
 	std::string name;
-	// weapon ( pointeur reference and shit ) check which one 
+	Weapon *weapon;
 	
 	public:
-	HumanB(); // name but not weapon ? 
+	HumanB(std::string name);
 	~HumanB();
 
-	// attack()
-	// display : <name> attacks with their <weapon type> 
+	void attack() const;
 
-	// setting the weapon ??
+	void setWeapon(Weapon &weapon);
 };
 
 #endif
 
 /** 
  * Human B DOES NOT takes the weapon in it's constructor
+ * utlise un pointeur vers weapon ( optionel, peut ne pas avoir d'arme)
+ * pointeur peut etre NULL, et peut changer de cible
+ * il peut etre assigne apres la construction
  */

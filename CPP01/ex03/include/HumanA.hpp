@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 17:34:42 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/13 20:54:35 by mlaffita         ###   ########.fr       */
+/*   Updated: 2025/12/16 16:48:34 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,13 @@ class HumanA{
 	
 	private:
 	std::string name;
-	// weapon ( pointeur reference and shit ) check which one 
+	Weapon &weapon;
 
 	public:
-	HumanA(); // name and weapon 
+	HumanA(std::string name, Weapon &weapon);
 	~HumanA();
 	
-	// attack()
-	// display : <name> attacks with their <weapon type> 
+	void attack() const;
 	
 };
 
@@ -35,4 +34,7 @@ class HumanA{
 
 /** 
  * Human A takes the weapon in it's constructor
+ * Utilise une REFERENCE vers weapon ( toujours arme )
+ * reference ne peut jamais etre nulle, ne peut pas changer de cible, 
+ * et doit etre init a la construction
  */
