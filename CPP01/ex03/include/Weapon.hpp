@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 17:34:49 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/16 17:14:56 by mlaffita         ###   ########.fr       */
+/*   Updated: 2026/01/11 12:03:35 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ class Weapon{
 	Weapon(std::string type);
 	~Weapon();
 
-	//getter
 	const std::string &getType() const;
-	
-	//setter
 	void setType(const std::string newType);
 };
 

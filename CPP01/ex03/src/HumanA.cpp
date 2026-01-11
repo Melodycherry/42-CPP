@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 17:34:52 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/16 17:28:58 by mlaffita         ###   ########.fr       */
+/*   Updated: 2026/01/10 15:06:30 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,6 @@ void HumanA::attack() const{
  * weapon est une référence (Weapon&)
  * Initialisation obligatoire dans la liste d'initialisation
  * Le weapon est passé au constructeur et ne peut jamais être NULL
+ * doit toujorus exister, me changera jamais, relation permanente
+ * ( son type peut changer via le setter de Weapon )
  */

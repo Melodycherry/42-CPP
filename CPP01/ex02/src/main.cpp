@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 16:59:15 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/13 17:25:17 by mlaffita         ###   ########.fr       */
+/*   Updated: 2026/01/11 12:02:24 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,3 @@ int main ()
     
     return 0;
 }
-
-/**
- * A string variable initialized to "HI THIS IS BRAIN".
- * stringPTR: a pointer to the string.
- * stringREF: a reference to the string.
- * 
- * PRINT
- * The memory address of the string variable.
- * The memory address held by stringPTR.
- * The memory address held by stringREF.
- * 
- * AND
- * The value of the string variable.
- * The value pointed to by stringPTR.
- * The value pointed to by stringREF.
- */

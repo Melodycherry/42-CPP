@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/13 17:34:56 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/16 17:29:51 by mlaffita         ###   ########.fr       */
+/*   Updated: 2026/01/10 15:07:20 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ void HumanB::setWeapon(Weapon &weapon){
 /**
  * weapon est un pointeur (Weapon*)
  * Peut être NULL (initialisé à NULL dans le constructeur)
+ * peut ne pas exister ( optionnel ) 
+ * peut changer ( reassignation possible )
  * Méthode setWeapon() pour attribuer une arme plus tard
  * Vérification if (this->weapon) avant d'utiliser le pointeur
+ * relation flexible et conditionnelle
  */

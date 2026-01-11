@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/19 12:04:32 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/20 13:15:46 by mlaffita         ###   ########.fr       */
+/*   Created: 2025/12/22 12:57:13 by mlaffita          #+#    #+#             */
+/*   Updated: 2026/01/11 12:16:23 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * Cas normal
- * s1 non présent
- * s1 présent plusieurs fois sur une ligne
- * s1 en début/fin de ligne
- * Fichier vide
- * s1 ou s2 vide
- * s1 ; erreur
- * s2 vide ; ok
- * Fichier inexistant 
- * chevauchement ? 
- * ex "aaa" -> "aa"
- */
+#include "Harl.hpp"
 
- /*
- * Pour le script : 
- * chmod +x test.sh
- * ./test.sh
- */
+int main ()
+{
+	Harl harl;
+
+	harl.complain("DEBUG");
+	harl.complain("INFO");
+	harl.complain("WARNING");
+	harl.complain("ERROR");
+	
+	return (0);
+}

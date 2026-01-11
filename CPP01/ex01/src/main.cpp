@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 17:40:18 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/13 16:50:19 by mlaffita         ###   ########.fr       */
+/*   Updated: 2026/01/11 12:00:50 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,13 @@ int main ()
 	Zombie *horde = zombieHorde(n, name);
 	std::cout << n << " zombies named " << name << " created." << std::endl;
 	
-	// announce all zombies
+	// Announce all zombies
 	std::cout << "\n-------- Announce --------" << std::endl;
 	for (int i = 0; i < n; i++){
 		horde[i].announce();
 	}
 
-	// delete horde
+	// Delete horde
 	std::cout << "\n----- Delete horde -----" << std::endl;
 	delete [] horde;
 	
@@ -87,13 +87,6 @@ int main ()
  */
 
  /**
-  * QD on utilise new[], tjr utiliser delete[]
-  * Sinon memory leak, on delete juste le 1er objet
-  */
-
-  /**
-   * Qd on utilise cin, ne peut pas etre empty
-   * car ignore les whitespace au debut
-   * va lire jusqu'au premier espace / new line
-   * donc si enter, cin va attendre un input
-   */
+ * Qd on utilise new[], tjr utiliser delete[]
+ * Sinon memory leak, on delete juste le 1er objet
+ */

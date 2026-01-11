@@ -6,7 +6,7 @@
 /*   By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 17:34:31 by mlaffita          #+#    #+#             */
-/*   Updated: 2025/12/20 13:10:36 by mlaffita         ###   ########.fr       */
+/*   Updated: 2026/01/11 12:13:44 by mlaffita         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main (int ac, char **av)
 	
 	std::string filename = av[1];
 	std::string search = av[2];
-	std::string replace = av[3]; // can be empty ? 
+	std::string replace = av[3];
 	
 	// si string vide 
 	if ( search.empty()){
@@ -34,14 +34,14 @@ int main (int ac, char **av)
 	}
 	
 	// si ouverture echoue 
-	std::ifstream input(filename);
+	std::ifstream input(filename.c_str());
 	if (!input){
 		std::cerr << "Error: Could not open source file " << filename << std::endl;
 		return 1;
 	}
 	
 	// cree fichier de destination
-	std::ofstream output(filename + ".replace");
+	std::ofstream output((filename + ".replace").c_str());
 	if (!output){
 		std::cerr << "Error: Could not create destination file " << filename << ".replace" << std::endl;
 		return 1;
@@ -60,7 +60,7 @@ int main (int ac, char **av)
 			output << line << "\n";
 	}
 	
-	// ferme fichier ??
+	// ferme fichier
 	input.close();
 	output.close();
 	
@@ -80,11 +80,33 @@ int main (int ac, char **av)
  */
 
  
+/**
+ * UTILISATION DES DIFFERENTE FONCTIONS DE STRING
+ * find(str, pos)    : cherche str à partir de pos, retourne l'index ou npos
+ * substr(pos, len)  : extrait une sous-chaîne depuis pos sur len caractères
+ * length() / size() : retourne le nombre de caractères dans la string
+ * npos              : constante = "non trouvé" (à comparer avec find)
+ * empty()           : retourne true si la string est vide
+ */
+
+ //----------------------------------------------------------
+ 
  /**
-  * UTILISATION DES DIFFERENTE FONCTIONS DE STRING
-  * find(str, pos)    : cherche str à partir de pos, retourne l'index ou npos
-  * substr(pos, len)  : extrait une sous-chaîne depuis pos sur len caractères
-  * length() / size() : retourne le nombre de caractères dans la string
-  * npos              : constante = "non trouvé" (à comparer avec find)
-  * empty()           : retourne true si la string est vide
+ * TEST CASES
+ * Cas normal
+ * s1 non présent
+ * s1 présent plusieurs fois sur une ligne
+ * s1 en début/fin de ligne
+ * Fichier vide
+ * s1 ou s2 vide
+ * s1 ; erreur
+ * s2 vide ; ok
+ * Fichier inexistant 
+ * chevauchement ? 
+ * ex "aaa" -> "aa"
+ */
+
+ /**
+  * La méthode .c_str() convertit un std::string en const char* 
+  * ce qui est nécessaire en C++98
   */

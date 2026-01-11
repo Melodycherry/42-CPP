@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mlaffita <marvin@42lausanne.ch>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/12/16 17:34:36 by mlaffita          #+#    #+#              #
-#    Updated: 2025/12/22 12:48:20 by mlaffita         ###   ########.fr        #
+#    Created: 2025/12/22 14:10:13 by mlaffita          #+#    #+#              #
+#    Updated: 2025/12/23 13:30:48 by mlaffita         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Sed
+NAME = harlFilter
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -I include/
-SRCS = src/main.cpp
+SRCS = src/main.cpp src/Harl.cpp
 OBJDIR = obj
 OBJS = $(SRCS:src/%.cpp=obj/%.o)
 
