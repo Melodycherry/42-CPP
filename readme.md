@@ -90,22 +90,50 @@ EX 03 : At least this beats coffee-making
 ---
 
 ### 🗃️ Module 06  
+*C++ casts*  
 
+EX 00 : Conversion of scalar types  
+EX 01 : Serialization  
+EX 02 : Identify real type  
+
+📅 Date de rendu : *to be determined*   
+📝 Note obtenue : *to be determined*  
 
 ---
 
 ### 🔢 Module 07   
- 
+*C++ templates*  
+
+EX 00 : Start with a few functions  
+EX 01 : Iter  
+EX 02 :  Array  
+
+📅 Date de rendu : *to be determined*   
+📝 Note obtenue : *to be determined*  
 
 ---
 
 ### 🧮 Module 08  
+*Templated containers, iterators, algorithms*  
 
+EX 00 : Easy find  
+EX 01 : Span  
+EX 02 : Mutated abomination  
+
+📅 Date de rendu : *to be determined*   
+📝 Note obtenue : *to be determined*  
 
 ---
 
 ### ⚡ Module 09   
-  
+*STL*    
+
+EX 00 : Bitcoin Exchange  
+EX 01 : Reverse Polish Notation  
+EX 02 : PmergeMe  
+
+📅 Date de rendu : *to be determined*   
+📝 Note obtenue : *to be determined*  
 
 ---
 
