@@ -79,10 +79,10 @@ Introduction au langage C++ et premières manipulations :
 ### 🎯 Module 05  
 *Repetition and Exceptions*  
 
-EX 00 : Mommy, when I grow up, I want to be a bureaucrat!  
-EX 01 : Form up, maggots!  
-EX 02 : No, you need form 28B, not 28C...  
-EX 03 : At least this beats coffee-making  
+✅ EX 00 : Mommy, when I grow up, I want to be a bureaucrat!  
+✅ EX 01 : Form up, maggots!  
+✅ EX 02 : No, you need form 28B, not 28C...  
+✅ EX 03 : At least this beats coffee-making  
 
 📅 Date de rendu : *to be determined*   
 📝 Note obtenue : *to be determined*   
