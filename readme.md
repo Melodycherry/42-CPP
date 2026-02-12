@@ -84,8 +84,8 @@ Introduction au langage C++ et premières manipulations :
 ✅ EX 02 : No, you need form 28B, not 28C...  
 ✅ EX 03 : At least this beats coffee-making  
 
-📅 Date de rendu : *to be determined*   
-📝 Note obtenue : *to be determined*   
+📅 Date de rendu : 12-02-2026    
+📝 Note obtenue : 100/100
 
 ---
 
