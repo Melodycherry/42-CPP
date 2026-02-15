@@ -92,9 +92,9 @@ Introduction au langage C++ et premières manipulations :
 ### 🗃️ Module 06  
 *C++ casts*  
 
-EX 00 : Conversion of scalar types  
-EX 01 : Serialization  
-EX 02 : Identify real type  
+✅ EX 00 : Conversion of scalar types  
+✅ EX 01 : Serialization  
+✅ EX 02 : Identify real type  
 
 📅 Date de rendu : *to be determined*   
 📝 Note obtenue : *to be determined*  
@@ -104,8 +104,8 @@ EX 02 : Identify real type
 ### 🔢 Module 07   
 *C++ templates*  
 
-EX 00 : Start with a few functions  
-EX 01 : Iter  
+✅ EX 00 : Start with a few functions  
+✅ EX 01 : Iter  
 EX 02 :  Array  
 
 📅 Date de rendu : *to be determined*   
