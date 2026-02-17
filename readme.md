@@ -96,8 +96,8 @@ Introduction au langage C++ et premières manipulations :
 ✅ EX 01 : Serialization  
 ✅ EX 02 : Identify real type  
 
-📅 Date de rendu : *to be determined*   
-📝 Note obtenue : *to be determined*  
+📅 Date de rendu : 17-02-2026    
+📝 Note obtenue : 100/100
 
 ---
 
@@ -106,10 +106,10 @@ Introduction au langage C++ et premières manipulations :
 
 ✅ EX 00 : Start with a few functions  
 ✅ EX 01 : Iter  
-EX 02 :  Array  
+✅ EX 02 : Array  
 
-📅 Date de rendu : *to be determined*   
-📝 Note obtenue : *to be determined*  
+📅 Date de rendu : 17-02-2026   
+📝 Note obtenue : 100/100
 
 ---
 
