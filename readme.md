@@ -116,9 +116,9 @@ Introduction au langage C++ et premières manipulations :
 ### 🧮 Module 08  
 *Templated containers, iterators, algorithms*  
 
-EX 00 : Easy find  
-EX 01 : Span  
-EX 02 : Mutated abomination  
+✅ EX 00 : Easy find  
+✅ EX 01 : Span  
+✅ EX 02 : Mutated abomination  
 
 📅 Date de rendu : *to be determined*   
 📝 Note obtenue : *to be determined*  
@@ -128,9 +128,9 @@ EX 02 : Mutated abomination
 ### ⚡ Module 09   
 *STL*    
 
-EX 00 : Bitcoin Exchange  
-EX 01 : Reverse Polish Notation  
-EX 02 : PmergeMe  
+✅ EX 00 : Bitcoin Exchange  
+✅ EX 01 : Reverse Polish Notation  
+✅ EX 02 : PmergeMe  
 
 📅 Date de rendu : *to be determined*   
 📝 Note obtenue : *to be determined*  
